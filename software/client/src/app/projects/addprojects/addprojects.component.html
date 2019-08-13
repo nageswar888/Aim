@@ -1,0 +1,51 @@
+
+<div class="row m-5">
+   <div class=" col col-lg col-sm col-xs col-lx col-md ">
+     <ng-flash-message></ng-flash-message>
+
+     <div class="card">
+      <div class="card-header text-center"><h5><b>{{'label.project.title'| translate}}</b></h5></div>
+      <div class="card-body">
+      <div class="form-group">
+      <form [formGroup]="ProjectForm" (ngSubmit)="onSubmit(ProjectForm.value)">
+        <div class="row">
+          <label class="col-lg-2 mt-2">{{'label.project.Name'| translate}}:</label>
+          <div class="form-group col-lg-4">
+          <input type="text" placeholder="{{'label.project.Name'| translate}}" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+          <div *ngIf="submitted && !!f.name.errors" class="invalid-feedback">
+            <div *ngIf="!!f.name.errors.required">* Project Name is required</div>
+            <div *ngIf="!!f.name.errors.minlength"><p>* Project Name must be at least 3 characters</p></div>
+          </div>
+        </div>
+          <label  class="col-lg-2 mt-2">{{'label.project.Vendor'| translate}}:</label>
+          <div class="form-group col-lg-4">
+          <input type="text" placeholder="{{'label.project.Vendor'| translate}}" formControlName="vendor" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.vendor.errors }" />
+          <div *ngIf="submitted && !!f.vendor.errors" class="invalid-feedback">
+            <div *ngIf="!!f.vendor.errors.required">* Vendor is required</div>
+            <div *ngIf="!!f.vendor.errors.minlength"><p>* Vendor must be at least 3 characters</p></div>
+          </div>
+        </div>
+        </div>
+        <div class="row">
+          <label class="col-lg-2 mt-2">{{'label.project.start date'| translate}}:</label>
+          <div class="form-group col-lg-4">
+          <input type="date" placeholder="{{'label.project.start date'| translate}}" formControlName="startDate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.startDate.errors }" />
+          <div *ngIf="submitted && !!f.startDate.errors" class="invalid-feedback">
+            <div *ngIf="!!f.startDate.errors.required">* Start Date is required</div>
+            <div *ngIf="!!f.startDate.errors.minlength"><p>* Start Date must be at least 3 characters</p></div>
+          </div>
+        </div>
+        </div>
+        <div class="row"><div class="col-lg-8"></div>
+        <div class="form-group col-lg-4">
+          <button class="btn  mt-3">{{'button.project'| translate}}</button>
+          <button class="btn  ml-3 mt-3" type="reset">{{'button.reset'| translate}} </button>
+        </div>
+        </div>
+      </form>
+      </div>
+    </div>
+    </div>
+    <br>
+   </div>
+  </div>

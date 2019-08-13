@@ -1,0 +1,93 @@
+<div class="row m-5">
+  <div class="col col-lg col-sm col-xs col-lx col-md ">
+    <ng-flash-message></ng-flash-message>
+    <div class="card">
+      <div class="card-header text-center"><h5><b>{{'lable.arequest.title'| translate}}</b></h5></div>
+      <div class="card-body">
+        <div class="form-group">
+          <form [formGroup]="AssetRequestForm" (ngSubmit)="onSubmit(AssetRequestForm.value)">
+            <div class="row">
+              <label class="col-lg-2 mt-2">{{'lable.arequest.type'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="number" placeholder="{{'lable.arequest.type'| translate}}" formControlName="assetType" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.assetType.errors }" />
+                <div *ngIf="submitted && !!f.assetType.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.assetType.errors.required">{{'lable.arequest.type*'| translate}}</div>
+                 </div>
+              </div>
+              <label class="col-lg-2 mt-2">{{'lable.arequest.rid'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="number" placeholder="{{'lable.arequest.rid'| translate}}" formControlName="resourceId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.resourceId.errors }" />
+                <div *ngIf="submitted && !!f.resourceId.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.resourceId.errors.required">{{'lable.arequest.rid*'| translate}}</div>
+                 </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <label class="col-lg-2 mt-2">{{'lable.arequest.pid'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="number" placeholder="{{'lable.arequest.pid'| translate}}" formControlName="projectId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.projectId.errors }" />
+                <div *ngIf="submitted && !!f.projectId.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.projectId.errors.required">{{'lable.arequest.pid*'| translate}}</div>
+                 </div>
+              </div>
+
+              <label class="col-lg-2 mt-2">{{'lable.arequest.due date'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="date" placeholder="{{'lable.arequest.due date'| translate}}" formControlName="dueDate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dueDate.errors }" />
+                <div *ngIf="submitted && !!f.dueDate.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.dueDate.errors.required">{{'lable.arequest.due date*'| translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <label class="col-lg-2 mt-2">{{'lable.arequest.Status'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="text" placeholder="{{'lable.arequest.Status'| translate}}" formControlName="status" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.status.errors }" />
+                <div *ngIf="submitted && !!f.status.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.status.errors.required">{{'lable.arequest.Status*'| translate}}</div>
+                </div>
+              </div>
+
+              <label class="col-lg-2 mt-2">{{'lable.arequest.Created by'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="number" placeholder="{{'lable.arequest.Created by'| translate}}" formControlName="createdBy" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.createdBy.errors }" />
+                <div *ngIf="submitted && !!f.createdBy.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.createdBy.errors.required">{{'lable.arequest.Created by*'| translate}}</div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <label class="col-lg-2 mt-2">{{'lable.arequest.reason'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="text" placeholder="{{'lable.arequest.reason'| translate}}" formControlName="reason" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.reason.errors }" />
+                <div *ngIf="submitted && !!f.reason.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.reason.errors.required">{{'lable.arequest.reason*'| translate}}</div>
+                 </div>
+              </div>
+
+              <label class="col-lg-2 mt-2">{{'lable.arequest.description'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="text" placeholder="{{'lable.arequest.description'| translate}}" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                <div *ngIf="submitted && !!f.description.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.description.errors.required">{{'lable.arequest.description*'| translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row"><div class="col-lg-8"></div>
+              <div class="form-group col-lg-4">
+                <button class="btn  mt-3">{{'button.assetrequest'| translate}}</button>
+                <button class="btn  ml-3 mt-3" type="reset">{{'button.reset'| translate}} </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

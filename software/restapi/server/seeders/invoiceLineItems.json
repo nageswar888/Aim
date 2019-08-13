@@ -1,0 +1,27 @@
+[
+  {
+    "invoiceID": 1,
+    "amount": 50000,
+    "createdDate": "2019-02-02"
+  },
+  {
+    "invoiceID": 2,
+    "amount": 40000,
+    "createdDate": "2019-02-06"
+  },
+  {
+    "invoiceID": 3,
+    "amount": 60000,
+    "createdDate": "2019-02-07"
+  },
+  {
+    "invoiceID": 4,
+    "amount": 40000,
+    "createdDate": "2019-02-06"
+  },
+  {
+    "invoiceID": 5,
+    "amount": 65000,
+    "createdDate": "2019-02-20"
+  }
+]

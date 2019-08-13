@@ -1,0 +1,72 @@
+[
+  {
+    "name": "HP Votro",
+    "company": "HP",
+    "assetType": "1",
+    "serialNumber": "HP 12002123",
+    "modal": "1211",
+    "yearOfManufacture": "2018",
+    "warrantyExpireDate": "2020-12-30",
+    "description": "HP laptop",
+    "subscriptionType": "Monthly",
+    "tag": "laptop",
+    "invoiceLineItemID": 1,
+    "createdDate": "2019-06-20"
+  },
+  {
+    "name": "Headphones",
+    "company": "S",
+    "assetType": "2",
+    "serialNumber": "Samsung 12546325",
+    "modal": "2565",
+    "yearOfManufacture": "2018",
+    "warrantyExpireDate": "2022-11-30",
+    "description": "samsung headphones",
+    "subscriptionType": "yearly",
+    "tag": "headphones",
+    "invoiceLineItemID": 2,
+    "createdDate": "2019-05-17"
+  },
+  {
+    "name": "Intellij",
+    "company": "JetBrains",
+    "assetType": "3",
+    "serialNumber": "12545241",
+    "modal": "5625",
+    "yearOfManufacture": "2018",
+    "warrantyExpireDate": "2025-01-31",
+    "description": "intellij licence for the systems",
+    "subscriptionType": "yearly",
+    "tag": "license",
+    "invoiceLineItemID": 3,
+    "createdDate": "2019-05-30"
+  },
+  {
+    "name": "keyboard",
+    "company": "Dell",
+    "assetType": "4",
+    "serialNumber": "DELL 13423454",
+    "modal": "12345",
+    "yearOfManufacture": "2018",
+    "warrantyExpireDate": "2025-01-01",
+    "description": "dell keyboard",
+    "subscriptionType": "quarterly",
+    "tag": "keyboard",
+    "invoiceLineItemID": 4,
+    "createdDate": "2019-07-05"
+  },
+  {
+    "name": "Mouse",
+    "company": "Dell",
+    "assetType": "5",
+    "serialNumber": "DELL 00216595",
+    "modal": "5645",
+    "yearOfManufacture": "2018",
+    "warrantyExpireDate": "2022-01-31",
+    "description": "dell mouse",
+    "subscriptionType": "yearly",
+    "tag": "mouse",
+    "invoiceLineItemID": 5,
+    "createdDate": "2019-06-06"
+  }
+]

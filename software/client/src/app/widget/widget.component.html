@@ -1,0 +1,61 @@
+
+<!--
+<div class="container-fluid pt-2">
+  <div class="border-bottom row-6">
+    <span class="col-xs col-md col-sm col-lg col-lx">
+  <i class="fas fa-copy fa-1x"> &nbsp; History </i>
+    </span>
+    <span class="col-xs col-md col-sm col-lg col-lx">
+      <i class="fas fa-copy fa-1x"> &nbsp; Files </i>
+    </span>
+    <span class="col-xs col-md col-sm col-lg col-lx">
+      <i class="fas fa-chart-bar fa-1x"> &nbsp; Reports</i>
+    </span>
+  </div>
+ </div>
+-->
+<div class="container-fluid pt-2">
+  <div class="border-bottom ">
+    <h5 id="name"><b>Quick View Dashboards</b></h5>
+  </div>
+  <div class="row m-1" >
+    <ul *ngFor="let details of states" class=" border col-xs-4 col-md-4 col-sm-4 col-lg-4 col-lx-4" (click)="Employee(details)"
+        [class.active]="details === activeState">
+      <a id="category1">{{details}}</a>
+    </ul>
+  </div>
+  <div class="row align-items-center">
+  <span class="col-xs-5 col-md-5 col-sm-5 col-lg-5 col-lx-5">
+        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchByRow">
+</span>
+    <span class="col-xs-5 col-md-5 col-sm-5 col-lg-5 col-lx-5"></span>
+    <span class="input-group-sm col-xs-2 col-md-2 col-sm-2 col-lg-2 col-lx-2">
+
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-light active" (click)="TableView() ">
+    <input type="radio" name="options" id="option2" value="TableView" tooltip="Table View" placement="top" show-delay="500" autocomplete="off" checked>
+    <i class="fa fa-table" aria-hidden="true" ></i>
+  </label>
+  <label class="btn btn-light " (click)="CardView()">
+    <input type="radio" name="options" id="option1" tooltip="Card View" placement="top" show-delay="500" autocomplete="off" >
+    <i class="fa fa-id-card" ></i>
+  </label>
+
+</div>
+    </span>
+  </div>
+</div>
+
+<div *ngIf="data=='Employees'">
+  <div [ngSwitch]="dataDisplayType">
+    <app-card-view *ngSwitchCase="'CardView'" [cardData]="data" ></app-card-view>
+    <app-resource-table *ngSwitchCase="'TableView'" [tableData]="data" [searchByRowValue]="searchByRow"></app-resource-table>
+  </div>
+</div>
+<div *ngIf="data=='Assets'">
+  <div [ngSwitch]="dataDisplayType">
+    <app-card-view *ngSwitchCase="'CardView'" [cardData]="data" ></app-card-view>
+    <app-table *ngSwitchCase="'TableView'" [tableData]="data" [searchByRowValue]="searchByRow"></app-table>
+  </div>
+</div>
+

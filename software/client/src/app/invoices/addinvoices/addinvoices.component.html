@@ -1,0 +1,81 @@
+<div class="row m-5">
+   <div class="col col-lg col-sm col-xs col-lx col-md ">
+    <div class="card">
+      <div class="card-header text-center"><h5><b>Add Invoice Line Items Details</b></h5></div>
+      <div class="card-body">
+        <div class="form-group">
+          <form [formGroup]="invoiceLineForm" (ngSubmit)="onSubmit(invoiceLineForm.value)">
+            <div class="row">
+              <div class="col-lg-1 mt-2">Invoice Id:</div>
+            <div class="form-group col-lg-5">
+               <input type="number" placeholder="Invoice Id" formControlName="invoiceId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.invoiceId.errors }" />
+              <div *ngIf="submitted && !!f.invoiceId.errors" class="invalid-feedback">
+                <div *ngIf="!!f.invoiceId.errors.required">* Invoice Id is required</div>
+               </div>
+            </div>
+              <div class="col-lg-1 mt-2">Amount:</div>
+            <div class="form-group col-lg-5">
+               <input type="number" placeholder="Amount" formControlName="amount" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.amount.errors }" />
+              <div *ngIf="submitted && !!f.amount.errors" class="invalid-feedback">
+                <div *ngIf="!!f.amount.errors.required">* Amount is required</div>
+               </div>
+            </div>
+            </div>
+            <div class="form-group row"><div class="col-lg-10"></div>
+              <button class="btn col-lg-2 ">Add Invoice Line Item</button>
+             </div>
+          </form>
+        </div>
+        <div class="row" *ngFor="let invoice of data">
+          <td class="col-lg-6 text-center">{{invoice.invoiceId}}</td>
+          <td class="col-lg-6 text-center">{{invoice.amount}}</td>
+        </div>
+        <div class="row card-header">
+          <div class="col-lg-6">Total Amount</div>
+          <div class="col-lg-6">{{total}}</div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <button class="btn mt-3" (click)="get()">Invoice Form</button>
+    <div *ngIf="id">
+      <div class="card mt-3">
+      <div class="card-header text-center"><h5><b>Add Invoice Details</b></h5></div>
+      <div class="card-body">
+        <div class="form-group">
+        <form [formGroup]="invoiceForm" (ngSubmit)="Onsubmitted(invoiceForm.value)">
+        <div class="row">
+          <label class="col-lg-2 mt-2">Invoice Date:</label>
+          <div class="form-group col-lg-4">
+          <input type="date" placeholder="Invoce Date" formControlName="invoiceDate" class="form-control" [ngClass]="{ 'is-invalid': submit && k.invoiceDate.errors }" />
+          <div *ngIf="submit && !!k.invoiceDate.errors" class="invalid-feedback">
+            <div *ngIf="!!k.invoiceDate.errors.required">* Invoice Date is required</div>
+          </div>
+        </div>
+          <label class="col-lg-2 mt-2">Received Date:</label>
+          <div class="form-group col-lg-4">
+          <input type="date" placeholder="Received Date" formControlName="receivedDate" class="form-control"  [ngClass]="{ 'is-invalid': submit && k.receivedDate.errors }"/>
+
+          <div *ngIf="submit && !!k.receivedDate.errors" class="invalid-feedback">
+            <div *ngIf="!!k.receivedDate.errors.required">* Received Date is required</div>
+          </div>
+        </div>
+        </div>
+          <div class="row">
+            <label class="col-lg-2 ">Total Amount:</label>
+             <label class="col-lg-4"><input type="number" formControlName="totalAmount" [(ngModel)] ='total'  class="form-control"  /></label>
+            </div>
+        <div class="row"><div class="col-lg-10"></div>
+        <div class="form-group col-lg-2">
+          <button class="btn btn-block ">Add Invoices</button>
+        </div>
+        </div>
+      </form>
+      </div>
+    </div>
+    </div>
+   </div>
+</div>
+</div>

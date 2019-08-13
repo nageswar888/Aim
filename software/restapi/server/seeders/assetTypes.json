@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Laptop",
+    "type": "Hardware",
+    "description": "apple Laptop",
+    "createdDate": "2019-04-09"
+  },
+  {
+    "name": "Headphones",
+    "type": "Hardware",
+    "description": "sony headphones",
+    "createdDate": "2019-04-17"
+  },
+  {
+    "name": "Licence",
+    "type": "software",
+    "description": "webstrome licence",
+    "createdDate": "2019-03-23"
+  },
+  {
+    "name": "keyboard",
+    "type": "Hardware",
+    "description": "dell keyboard",
+    "createdDate": "2019-04-20"
+  },
+  {
+    "name": "Mouse",
+    "type": "Hardware",
+    "description": "dell mouse",
+    "createdDate": "2019-04-03"
+  }
+]

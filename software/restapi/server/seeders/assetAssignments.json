@@ -1,0 +1,58 @@
+[
+{
+"assetID" : 2,
+"resourceID" : 1,
+"projectID" : 1,
+"billable": "yes",
+"startDate": "2019-07-08",
+"endDate": "2020-07-08",
+"status": "assigned",
+"active": "yes",
+"createdDate": "2019-07-08"
+},
+{
+"assetID" : 2,
+"resourceID" :2,
+"projectID" : 2,
+"billable": "yes",
+"startDate": "2019-06-10",
+"endDate": "2020-06-10",
+"status":"assigned",
+"active":"yes",
+"createdDate":"2019-06-10"
+},
+{
+"assetID" : 3,
+"resourceID" :3,
+"projectID" :3,
+"billable":"yes",
+"startDate":"2019-05-15",
+"endDate":"2020-05-15",
+"status":"assigned",
+"active": "yes",
+"createdDate": "2019-05-15"
+},
+{
+
+"assetID" :4,
+"resourceID" :4,
+"projectID" :4,
+"billable": "yes",
+"startDate":"2019-04-17",
+"endDate": "2019-08-10",
+"status":"assigned",
+"active":"yes",
+"createdDate":"2019-04-17"
+},
+{
+"assetID" : 5,
+"resourceID" :5,
+"projectID" :5,
+"billable": "yes",
+"startDate": "2019-07-02",
+"endDate":"2019-09-10",
+"status":"assigned",
+"active":"yes",
+"createdDate": "2019-07-02"
+}
+]

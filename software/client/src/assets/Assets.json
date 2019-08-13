@@ -1,0 +1,86 @@
+{
+  "Assets": [
+
+    {
+      "AssetType":1,
+      "Company": "Dell",
+      "SerialNumber": "DELL12002123",
+      "Modal": "5000",
+      "Year of Manufacture":1015,
+      "Warranty expiry date": "12/07/2022",
+      "Description": "--",
+      "Subscription Type": "Monthly",
+      "Tag": "D-Type",
+      "InvoiceLineItemId": 1,
+      "Available": "TRUE"
+    },
+
+    {
+      "AssetType":2,
+      "Company": "Samsung",
+      "SerialNumber": "1232212",
+      "Modal": "SS11",
+      "Year of Manufacture":2017,
+      "Warranty expiry date": "05/01/2022",
+      "Description": "--",
+      "Subscription Type": "perpetual",
+      "Tag": "D-Type",
+      "InvoiceLineItemId": 2,
+      "Available": "TRUE"
+    },
+    {
+      "AssetType":3,
+      "Company": "Intellij",
+      "SerialNumber": "DELL12002123",
+      "Modal": 5000,
+      "Year of Manufacture":1015,
+      "Warranty expiry date": "01/03/2019",
+      "Description": "--",
+      "Subscription Type": "Monthly",
+      "Tag": "D-Type",
+      "InvoiceLineItemId": 1,
+      "Available": "TRUE"
+    },
+    {
+      "AssetType":4,
+      "Company": "HP",
+      "SerialNumber": "HPLL12002123",
+      "Modal": "ES5000",
+      "Year of Manufacture":2015,
+      "Warranty expiry date": "12/07/2022",
+      "Description": "--",
+      "Subscription Type": "Monthly",
+      "Tag": "D-Type",
+      "InvoiceLineItemId": 3,
+      "Available": "TRUE"
+    },
+
+    {
+      "AssetType":5,
+      "Company": "Galaxy",
+      "SerialNumber": "1232211",
+      "Modal": "SS12",
+      "Year of Manufacture":2017,
+      "Warranty expiry date": "05/01/2022",
+      "Description": "--",
+      "Subscription Type": "perpetual",
+      "Tag": "D-Type",
+      "InvoiceLineItemId": 2,
+      "Available": "TRUE"
+    },
+    {
+      "AssetType":6,
+      "Company": "Intellij",
+      "SerialNumber": "DELL12002188",
+      "Modal": 5001,
+      "Year of Manufacture":1015,
+      "Warranty expiry date": "01/03/2019",
+      "Description": "--",
+      "Subscription Type": "Monthly",
+      "Tag": "D-Type",
+      "InvoiceLineItemId": 7,
+      "Available": "TRUE"
+    }
+
+  ]
+}

@@ -1,0 +1,37 @@
+
+<div class="container">
+  <div class="text-center " ><h5 class="mt-3"><b>{{'lable.arequest.view'| translate}} </b></h5></div>
+
+  <table class="table table-striped row-border hover">
+
+    <thead>
+    <tr class="row" style="background-color: #29CF9F">
+      <td class=" clr col-xs-1 col-md-1 col-sm-1 col-lg-1 col-lx-1 text-center" scope="col">{{'lable.arequest.id'| translate}}</td>
+      <td class=" clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'lable.arequest.type'| translate}}</td>
+      <td class=" clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'lable.arequest.rid'| translate}}</td>
+      <td class=" clr col-xs-1 col-md-1 col-sm-1 col-lg-1 col-lx-1 text-center" scope="col">{{'lable.arequest.pid'| translate}}</td>
+      <td class=" clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'lable.arequest.due date'| translate}}</td>
+      <td class=" clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'lable.arequest.Status'| translate}}</td>
+      <td class=" clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'lable.arequest.Created by'| translate}}</td>
+      <td class=" clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'lable.arequest.reason'| translate}}</td>
+      <td class=" clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'lable.arequest.description'| translate}}</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="row"  *ngFor="let rowData of rowsData | paginate: { itemsPerPage: itemsperpage, currentPage: pageno,totalItems:total }">
+      <td class="col-xs-1 col-md-1 col-sm-1 col-lg-1 col-lx-1 text-center" scope="col">{{rowData.id}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.assetType}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.resourceID}}</td>
+      <td class="col-xs-1 col-md-1 col-sm-1 col-lg-1 col-lx-1 text-center" scope="col">{{rowData.projectID}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.dueDate|date}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.status}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.createdBy}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.reason}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.description}}</td>
+    </tr>
+    <pagination-controls (pageChange)="getPagination($event)"></pagination-controls>
+    </tbody>
+
+  </table>
+</div>
+

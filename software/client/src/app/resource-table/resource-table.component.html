@@ -1,0 +1,87 @@
+
+<!--*ngIf="visible"-->
+<br>
+<div class="row">
+  <div class="col-xs-3 col-md-3 col-sm-3 col-lg-3 col-lx-3">
+    <mat-card class="asearchCard">
+    <form [formGroup]="advancedSearch" (ngSubmit)="advanceSearch()">
+      <label>
+        {{'lable.resource.name'| translate}}
+        <br>
+        <input type="text" placeholder="{{'lable.resource.name'| translate}}" formControlName="Name">
+      </label>
+      <label>
+        {{'label.resource.email'| translate}}
+
+        <br>
+        <input type="text" placeholder="{{'label.resource.email'| translate}}" formControlName="EmailId">
+      </label>
+      <label>
+        {{'label.resource.email'| translate}}<br>
+        <input type="text" placeholder="{{'label.resource.email'| translate}}" formControlName="Mobile_Number">
+      </label>
+      <!--
+      Add Multi selector here
+      -->
+
+      <label>
+        {{'label.resource.YOF'| translate}}:<br>
+        <input type="text" placeholder="{{'label.resource.YOF'| translate}}" formControlName="yearOfManufacture">
+      </label>
+      <label>
+        DATE<br>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </label>
+      <br>
+      <button type="submit">Submit</button>
+
+    </form>
+    </mat-card>
+  </div>
+  <div *ngIf="keys" class="tableScrolling col-xs col-md col-sm col-lg col-lx-">
+    <table datatable [dtOptions]="dtOptions" class="table table-striped row-border hover" >
+
+      <thead>
+      <tr class="row ColorForHeader"  style="background-color: #29CF9F">
+
+        <td class="col-xs col-md col-sm col-lg col-lx ColorForHeader">Id</td>
+        <td class="col-xs col-md col-sm col-lg col-lx ColorForHeader">First Name</td>
+
+        <td class="col-xs col-md col-sm col-lg col-lx ColorForHeader">Last Name</td>
+
+        <td class="col-xs col-md col-sm col-lg col-lx ColorForHeader">Email</td>
+                <td class="col-xs col-md col-sm col-lg col-lx ColorForHeader">Phone Number</td>
+        <td class="col-xs col-md col-sm col-lg col-lx ColorForHeader">Actions</td>
+
+
+
+
+      </tr>
+      </thead>
+      <div >
+
+      </div>
+      <tbody>
+
+      <tr  class="row"  *ngFor="let rowData of rowsData | paginate: { itemsPerPage: 5, currentPage: p, totalItems:total}" >
+        <td  class="col-xs col-md col-sm col-lg col-lx" tooltip={{rowData[key]}} placement="top" show-delay="500" *ngFor="let key of keys" >{{rowData[key] | tableData}}{{rowData["FirstName"]}} </td>
+        <td class="col-xs col-md col-sm col-lg col-lx"><button class="btn" (click)="ViewDetails(rowData.id)">Details <i class="fas fa-angle-right"></i></button></td>
+
+
+      </tr>
+
+      </tbody><br>
+      <pagination-controls (pageChange)="getPage($event)"></pagination-controls>
+
+    </table>
+  </div>
+  <div *ngIf="!keys" style="align : center">
+    DATA IS NOT AVAILABLE
+  </div>
+</div>
+
+

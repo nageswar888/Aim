@@ -1,0 +1,52 @@
+[
+{
+"vendor" : "Semanticbits",
+"purchasedOn" : "2019-02-02",
+"status" : "completed",
+"receivedDate" : "2019-02-04",
+"assetRequestID" : 1,
+"description" : "purchased for the purpose of company usage",
+"createdBy" : 1,
+"createdDate" :"2019-02-04"
+},
+{
+"vendor" :"Semanticbits",
+"purchasedOn" :"2019-03-12",
+"status" :"completed",
+"receivedDate" :"2019-03-14",
+"assetRequestID" : 2,
+"description" :"purchased for the purpose of company usage",
+"createdBy" : 2,
+"createdDate" : "2019-03-12"
+},
+{
+"vendor" :"Semanticbits",
+"purchasedOn" : "2019-02-15",
+"status" : "completed",
+"receivedDate" : "2019-02-17",
+"assetRequestID" :3,
+"description" :"purchased for the purpose of company usage",
+"createdBy" :3,
+"createdDate" : "2019-02-15"
+},
+{
+"vendor" :"Semanticbits",
+"purchasedOn" : "2019-03-23",
+"status" : "completed",
+"receivedDate" : "2019-03-25",
+"assetRequestID" : 4,
+"description" :"purchased for the purpose of company usage",
+"createdBy" : 4,
+"createdDate" : "2019-03-23"
+},
+{
+"vendor" :"Semanticbits",
+"purchasedOn" :"2019-03-13",
+"status" : "completed",
+"receivedDate" : "2019-03-15",
+"assetRequestID" : 5,
+"description" :"purchased for the purpose of company usage",
+"createdBy" : 5,
+"createdDate" : "2019-03-13"
+}
+]

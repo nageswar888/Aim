@@ -1,0 +1,57 @@
+[
+  {
+    "assetType": 1,
+    "resourceID": 1,
+    "projectID": 1,
+    "dueDate": "2019-07-18",
+    "status": "Not completed",
+    "createdBy": 1,
+    "reason": "request for manager",
+    "description": "need the laptop to write the code",
+    "createdDate": "2019-07-03"
+  },
+  {
+    "assetType": 2,
+    "resourceID": 2,
+    "projectID": 2,
+    "dueDate": "2019-07-25",
+    "status": "Not completed",
+    "createdBy": 2,
+    "reason": "request",
+    "description": "to talk with the clients",
+    "createdDate": "2019-07-02"
+  },
+  {
+    "assetType": 3,
+    "resourceID": 3,
+    "projectID": 3,
+    "dueDate": "2019-07-01",
+    "status": "completed",
+    "createdBy": 3,
+    "reason": "pending request",
+    "description": "required for the tool",
+    "createdDate": "2019-06-30"
+  },
+  {
+    "assetType": 4,
+    "resourceID": 4,
+    "projectID": 4,
+    "dueDate": "2019-06-30",
+    "status": "completed",
+    "createdBy": 4,
+    "reason": "for sale",
+    "description": "for developing the code",
+    "createdDate": "2019-06-20"
+  },
+  {
+    "assetType": 5,
+    "resourceID": 8,
+    "projectID": 5,
+    "dueDate": "2019-08-12",
+    "status": "Not completed",
+    "createdBy": 5,
+    "reason": "for project",
+    "description": "required for the developing code",
+    "createdDate": "2019-08-10"
+  }
+]

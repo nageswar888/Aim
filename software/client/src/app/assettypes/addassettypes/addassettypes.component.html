@@ -1,0 +1,51 @@
+
+
+<div class="row m-5">
+  <div class="col col-lg col-sm col-xs col-lx col-md">
+    <ng-flash-message></ng-flash-message>
+
+    <div class="card">
+      <div class="card-header text-center"><h5><b>{{'lable.atype.title'| translate}}</b></h5></div>
+      <div class="card-body">
+      <div class="form-group">
+      <form [formGroup]="AssetTypeForm" *ngIf="showForm" (ngSubmit)="onSubmit(AssetTypeForm.value)">
+        <div class="row">
+          <label class="col-lg-2 mt-2">{{'lable.atype.name'| translate}}:</label>
+          <div class="form-group col-lg-4">
+          <input type="text" placeholder="{{'lable.atype.name'| translate}}" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+          <div *ngIf="submitted && !!f.name.errors" class="invalid-feedback">
+            <div *ngIf="!!f.name.errors.required">* Asset Name is required</div>
+            <div *ngIf="!!f.name.errors.minlength"><p>* Asset Name must be at least 3 characters</p></div>
+          </div>
+        </div>
+
+          <label class="col-lg-2 mt-2">{{'lable.atype.type'| translate}}:</label>
+          <div class="form-group col-lg-4">
+          <input type="text" placeholder="{{'lable.atype.type'| translate}}" formControlName="type" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.type.errors }" />
+          <div *ngIf="submitted && !!f.type.errors" class="invalid-feedback">
+            <div *ngIf="!!f.type.errors.required">* Type is required</div>
+           </div>
+        </div>
+        </div>
+        <div class="row">
+          <label class="col-lg-2 mt-2">{{'lable.atype.description'| translate}}:</label>
+          <div class="form-group col-lg-4">
+          <input type="text" placeholder="{{'lable.atype.description'| translate}}" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+          <div *ngIf="submitted && !!f.description.errors" class="invalid-feedback">
+            <div *ngIf="!!f.description.errors.required">* Description is required</div>
+            <div *ngIf="!!f.description.errors.minlength"><p>* Description must be at least 3 characters</p></div>
+          </div>
+        </div>
+        </div>
+        <div class="row"><div class="col-lg-8"></div>
+        <div class="form-group col-lg-4">
+          <button class="btn mt-2 ">{{'button.assettype'| translate}}</button>
+          <button class="btn mt-2 ml-3" type="reset">{{'button.reset'| translate}} </button>
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  </div>
+</div>

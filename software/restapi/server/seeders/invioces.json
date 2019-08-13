@@ -1,0 +1,32 @@
+[
+  {
+    "invoiceDate": "1/2/1019",
+    "receivedDate": "2/2/2019",
+    "totalAmount": 45000,
+    "createdDate": "1/2/2019"
+  },
+  {
+    "invoiceDate": "2019-02-20",
+    "receivedDate": "2019-02-21",
+    "totalAmount": 5000,
+    "createdDate": "2019-02-20"
+  },
+  {
+    "invoiceDate": "2019-02-06",
+    "receivedDate": "2019-02-07",
+    "totalAmount": 6000,
+    "createdDate": "2019-02-06"
+  },
+  {
+    "invoiceDate": "2019-02-19",
+    "receivedDate": "2019-02-20",
+    "totalAmount": 500,
+    "createdDate": "2019-02-19"
+  },
+  {
+    "invoiceDate": "2019/03/02",
+    "receivedDate": "2019/03/03",
+    "totalAmount": 300,
+    "createdDate": "2019/03/02"
+  }
+]

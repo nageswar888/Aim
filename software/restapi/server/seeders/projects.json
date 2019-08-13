@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Asset inventory management",
+    "vendor": "Semanticbits",
+    "startDate": "2019-05-01",
+    "createdDate": "2019-05-01"
+  },
+  {
+    "name": "CGW",
+    "vendor": "Pieriandx",
+    "startDate": "2013-09-20",
+    "createdDate": "2013-09-20"
+  },
+  {
+    "name": "IVD",
+    "vendor": "Pieriandx",
+    "startDate": "2019-02-10",
+    "createdDate": "2019-02-10"
+  },
+  {
+    "name": "UP VS",
+    "vendor": "UP Govt",
+    "startDate": "2012-10-12",
+    "createdDate": "2012-10-12"
+  },
+  {
+    "name": "CCXP",
+    "vendor": "Washington University",
+    "startDate": "2018-06-17",
+    "createdDate": "2018-06-17"
+  }
+]

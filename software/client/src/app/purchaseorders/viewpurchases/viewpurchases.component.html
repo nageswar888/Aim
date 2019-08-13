@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="text-center" ><h5><b>{{'label.p.order.view'| translate}}</b></h5></div>
+
+  <table class="table table-striped row-border hover">
+
+    <thead>
+    <tr class="row" style="background-color: #29CF9F">
+      <td class="clr col-xs-1 col-md-1 col-sm-1 col-lg-1 col-lx-1 text-center" scope="col">{{'label.p.order.id'| translate}}</td>
+      <td class="clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'label.p.order.vendor'| translate}}</td>
+      <td class="clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'label.p.order.purchased on'| translate}}</td>
+      <td class="clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'label.p.order.status'| translate}}</td>
+      <td class="clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'label.p.order.recieved date'| translate}}</td>
+      <td class="clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'label.p.order.Asset request id'| translate}}</td>
+      <td class="clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'label.p.order.description'| translate}}</td>
+      <td class="clr col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{'label.p.order.created by'| translate}}</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="row"  *ngFor="let rowData of rowsData  | paginate: { itemsPerPage: itemsperpage, currentPage: pageno,totalItems:total }">
+      <td class="col-xs-1 col-md-1 col-sm-1 col-lg-1 col-lx-1 text-center" scope="col">{{rowData.id}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.vendor}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.purchasedOn|date}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.status}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.receivedDate|date}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.assetRequestID}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.description}}</td>
+      <td class="col-xs col-md col-sm col-lg col-lx text-center" scope="col">{{rowData.createdBy}}</td>
+    </tr>
+    <pagination-controls (pageChange)="getPagination($event)"></pagination-controls>
+    </tbody>
+
+  </table>
+</div>

@@ -1,0 +1,109 @@
+<div class="row m-5">
+   <div class="col col-lg col-sm col-xs col-lx col-md ">
+     <ng-flash-message></ng-flash-message>
+     <div class="card">
+      <div class="card-header text-center"><h5><b>{{'label.resource.title'| translate}}</b></h5></div>
+      <div class="card-body">
+      <div class="form-group">
+      <form [formGroup]="AddResourcesForm" (ngSubmit)="onSubmit(AddResourcesForm.value)">
+        <div class="row">
+          <label class="col-lg-2 mt-2">{{'label.resource.first name'| translate}}:</label>
+          <div class="form-group col-lg-4">
+          <input type="text" placeholder="{{'label.resource.first name'| translate}}" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+          <div *ngIf="submitted && !!f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="!!f.firstName.errors.required">* First Name is required</div>
+            <div *ngIf="!!f.firstName.errors.minlength"><p>* First Name must be at least 3 characters</p></div>
+          </div>
+        </div>
+          <label class="col-lg-2 mt-2">{{'label.resource.last name'| translate}}:</label>
+          <div class="form-group col-lg-4">
+          <input type="text" placeholder="{{'label.resource.last name'| translate}}" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+          <div *ngIf="submitted && !!f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="!!f.lastName.errors.required">* Last Name is required</div>
+            <div *ngIf="!!f.lastName.errors.minlength"><p>* Last Name must be at least 3 characters</p></div>
+          </div>
+        </div>
+        </div>
+
+        <div class="row">
+        <label class="col-lg-2 mt-2">{{'label.resource.email'| translate}}:</label>
+        <div class="form-group col-lg-4">
+           <input type="text" placeholder="{{'label.resource.email'| translate}}" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+          <div *ngIf="submitted && !!f.email.errors" class="invalid-feedback">
+            <div *ngIf="!!f.email.errors.required">* Email is required</div>
+            <div *ngIf="!!f.email.errors.pattern"><p>* Email must be vaild</p></div>
+          </div>
+        </div>
+
+          <label class="col-lg-2 mt-2">{{'label.resource.emp id'| translate}}:</label>
+        <div class="form-group col-lg-4">
+          <input type="text" placeholder="{{'label.resource.emp id'| translate}}" formControlName="empId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.empId.errors }" />
+          <div *ngIf="submitted && !!f.empId.errors" class="invalid-feedback">
+            <div *ngIf="!!f.empId.errors.required">* Emp Id is required</div>
+           </div>
+        </div>
+        </div>
+
+        <div class="row">
+          <label class="col-lg-2 mt-2">{{'label.resource.joiningDate'| translate}}:</label>
+          <div class="form-group col-lg-4">
+           <input type="date" placeholder="{{'label.resource.joiningDate'| translate}}" formControlName="joiningDate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.joiningDate.errors }" />
+          <div *ngIf="submitted && !!f.joiningDate.errors" class="invalid-feedback">
+            <div *ngIf="!!f.joiningDate.errors.required">* Joining Date is required</div>
+           </div>
+        </div>
+
+          <label class="col-lg-2 mt-2">{{'label.resource.Phone'| translate}}:</label>
+          <div class="form-group col-lg-4">
+            <input type="text" placeholder="{{'label.resource.Phone'| translate}}" formControlName="phoneNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }" />
+            <div *ngIf="submitted && !!f.phoneNumber.errors" class="invalid-feedback">
+              <div *ngIf="!!f.phoneNumber.errors.required">* Phone Number is required</div>
+              <div *ngIf="!!f.phoneNumber.errors.minlength"><p>* Phone Number must be at least 10 digits</p></div>
+              <div *ngIf="!!f.phoneNumber.errors.maxlength"><p>* Phone Number must be at least 10 digits</p></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <label class="col-lg-2 mt-2">{{'label.resource.Address'| translate}}:</label>
+          <div class="form-group col-lg-4">
+          <input type="text" placeholder="{{'label.resource.Address'| translate}}" formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+          <div *ngIf="submitted && !!f.address.errors" class="invalid-feedback">
+            <div *ngIf="!!f.address.errors.required">* Address is required</div>
+            <div *ngIf="!!f.address.errors.minlength"><p>* Address must be at least 3 characters</p></div>
+          </div>
+        </div>
+
+          <label class="col-lg-2 mt-2">{{'label.resource.Supervisor'| translate}}:</label>
+          <div class="form-group col-lg-4">
+            <input type="number" placeholder="{{'label.resource.Supervisor'| translate}}" formControlName="supervisor" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.supervisor.errors }" />
+            <div *ngIf="submitted && !!f.supervisor.errors" class="invalid-feedback">
+              <div *ngIf="!!f.supervisor.errors.required">* Supervisor is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+        <label class="col-lg-2 mt-2">{{'label.resource.labor category'| translate}}:</label>
+        <div class="form-group col-lg-4">
+          <input type="text" placeholder="{{'label.resource.labor category'| translate}}" formControlName="laborCategory" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.laborCategory.errors }" />
+          <div *ngIf="submitted && !!f.laborCategory.errors" class="invalid-feedback">
+            <div *ngIf="!!f.laborCategory.errors.required">* Labor Category is required</div>
+            <div *ngIf="!!f.laborCategory.errors.minlength"><p>* Labor Category must be at least 3 characters</p></div>
+          </div>
+        </div>
+        </div>
+        <div class="row"><div class="col-lg-8"></div>
+        <div class="form-group col-lg-4">
+          <button class="btn  mt-3">{{'button.resource'| translate}}</button>
+          <button class="btn  ml-3 mt-3" type="reset">{{'button.reset'| translate}} </button>
+        </div>
+        </div>
+      </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

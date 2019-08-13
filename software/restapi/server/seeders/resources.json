@@ -1,0 +1,56 @@
+[
+{
+"firstname":"Nageswar",
+"lastname":"koppula",
+"email":"knageswar@gmail.com",
+"empID":"001",
+"joiningDate":"2018-11-12",
+"supervisor":1,
+"address":"Kphb, Hyderabad",
+"phonenumber":"9951506361",
+"laborCategory":"software developer"
+},
+{
+"firstname":"Sai kumar",
+"lastname":"puli",
+"email":"saipuli@gmail.com",
+"empID":"002",
+"joiningDate":"2018-11-12",
+"supervisor":2,
+"address":"Kphb, Hyderabad",
+"phonenumber":"9659808800",
+"laborCategory":"software developer"
+},
+{
+"firstname":"Vamsi",
+"lastname":"guggilam",
+"email":"vamsi@gmail.com",
+"empId":"003",
+"joiningDate":"2018-11-12",
+"supervisor":3,
+"address":"Gachibowli, Hyderabad",
+"phoneNumber":"9848674652",
+"laborCategory":"software developer"
+},
+{
+"firstname":"Hemanth",
+"lastname":"Nidamanuri",
+"email":"hemanth@gmail.com",
+"empId":"004",
+"joiningDate":"2018-11-12",
+"supervisor":4,
+"address":"film nagar, Hyderabad",
+"phoneNumber":"9565865824",
+"laborCategory":"software developer"
+},
+{
+"firstname":"Praveen",
+"lastname":"Bommana",
+"email":"praveen@gmail.com",
+"empId":"005",
+"joiningDate":"2018-11-12",
+"supervisor":5,
+"address":"chintal, Hyderabad",
+"phoneNumber":"9848652541",
+"laborCategory":"software developer"
+}]

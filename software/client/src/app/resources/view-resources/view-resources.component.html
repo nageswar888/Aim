@@ -1,0 +1,44 @@
+<br>
+<div *ngIf="details">
+<div class="container">
+  <div class="row">
+  <div class="col-md-3"><img src="assets/Employees.jpg"></div>
+  <div class="col-md-9">
+    <div class="name">{{details.firstname|titlecase}}&nbsp;&nbsp;{{details.lastname|titlecase}}</div>
+    <div class="designation">{{details.laborCategory|titlecase}}</div>
+    <br><br>
+    <p class="designation"><b>{{'label.profile'| translate}}</b></p><hr>
+    <table>
+      <tr>
+        <td>{{'lable.resource.name'| translate}}</td>
+        <td>{{details.firstname|titlecase}}&nbsp;{{details.lastname|titlecase}}</td>
+      </tr>
+      <tr>
+        <td>{{'label.resource.email'| translate}}</td>
+        <td>{{details.email}}</td>
+      </tr>
+      <tr>
+        <td>{{'label.resource.Phone'| translate}}</td>
+        <td>{{details.phonenumber}}</td>
+      </tr>
+      <tr>
+        <td>{{'label.resource.Address'| translate}}</td>
+        <td>{{details.address}}</td>
+      </tr>
+      <tr>
+        <td>{{'label.resource.joiningDate'| translate}}</td>
+        <td>{{details.joiningDate | date}}</td>
+      </tr>
+      <tr>
+        <td>{{'label.resource.labor category'| translate}}</td>
+        <td>{{details.laborCategory}}</td>
+      </tr>
+      <tr>
+        <td>{{'label.resource.Supervisor'| translate}}</td>
+        <td>{{details.supervisor}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,17 @@
+{
+  "generator-ng-fullstack": {
+    "appName": "accessinventorymanagementtool",
+    "username": "nidamanurihemanth",
+    "userEmail": "hemanth.nidamanuri@india.semanticbits.com",
+    "stack": "server",
+    "repoHostUrl": "github.com",
+    "userNameSpace": "nidamanurihemanth",
+    "client": "",
+    "server": "node",
+    "nodeWebFrameworkServer": "express",
+    "transpilerServer": "babel",
+    "secure": false,
+    "testsSeparated": true,
+    "boilerplate": true
+  }
+}

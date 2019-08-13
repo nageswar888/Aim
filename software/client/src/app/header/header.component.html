@@ -1,0 +1,194 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/dashboard">
+    <span class="fa-stack fa-2x media1 ">
+      <i class="fas fa-laptop  laptopIcon"></i>
+      <span class="fa fa-stack-1x laptopHead">
+          <span>AM</span>
+      </span>
+    </span>
+    </a>
+    <div *ngIf="!login" class="col-xs-1 col-md-1 col-sm-1 col-lg-1 col-lx-1 assetManagernotLogin">
+      ASSET MANAGER
+    </div>
+    <div *ngIf="login" class="col-xs-1 col-md-1 col-sm-1 col-lg-1 col-lx-1 assetManager">ASSET MANAGER</div>
+    <div *ngIf="login" class="col-xs-1 col-md-1 col-sm-1 col-lg-1 col-lx-1 assetManager"></div>
+
+    <div class="col-xs-8 col-md-8 col-sm-8 col-lg-8 col-lx-8"></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div *ngIf="login" class="collapse navbar-collapse" id="navbarResponsive">
+
+      <ul class="navbar-nav" id="EnableIcons">
+        <li class="nav-item"  style="padding-top: 3px; padding-right: 10px; color: white" >
+          <div class="dropdown">
+            <a  style="color: white" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li class="dropdown-submenu"><a class="dropdown-item " >Assets</a>
+                <ul class="dropdown-menu ml-5">
+                  <li><a class="dropdown-item" routerLink="addasset" >Add Asset</a></li>
+                  <!--<li><a class="dropdown-item" href="#">Subsubmenu1</a></li>-->
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu"><a class="dropdown-item ">Asset Types</a>
+                <ul class="dropdown-menu ml-4">
+                  <li><a class="dropdown-item" routerLink="addassettypes" >Add Asset Types</a></li>
+                  <li><a class="dropdown-item" routerLink="viewassettypes" >View Asset Types</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu"><a class="dropdown-item ">Asset Requests</a>
+                <ul class="dropdown-menu ml-2">
+                   <li> <a class="dropdown-item" routerLink="assetrequests" >Add Asset Requests</a></li>
+                   <li> <a class="dropdown-item" routerLink="viewassetrequests" >View Asset Requests</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu "><a class="dropdown-item  ">Invoice</a>
+                <ul class="dropdown-menu ml-5">
+                  <li><a class="dropdown-item" routerLink="addinvoices" >Add Invoices</a></li>
+                  <!--<li><a class="dropdown-item" href="#">Subsubmenu2</a></li>-->
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu"><a class="dropdown-item ">Resource </a>
+                <ul class="dropdown-menu ml-5">
+                  <li><a class="dropdown-item" routerLink="addresources">Add Resource </a></li>
+                  <!--<li><a class="dropdown-item" href="#">Subsubmenu2</a></li>-->
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu"><a class="dropdown-item ">Projects</a>
+                <ul class="dropdown-menu ml-5">
+                  <li><a class="dropdown-item" routerLink="addprojects" >Add Projects</a></li>
+                  <li> <a class="dropdown-item" routerLink="viewprojects" >View Projects</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu"><a class="dropdown-item ">Purchase Orders</a>
+                <ul class="dropdown-menu">
+                  <li> <a class="dropdown-item" routerLink="addpurchaseorders" >Add Purchase Orders</a></li>
+                  <li><a class="dropdown-item" routerLink="viewpurchaseorders" >View Purchase Orders</a></li>
+                </ul>
+              </li>
+          </ul>
+           </div>
+        </li>
+        <li class="nav-item" style="padding-right: 10px">
+          <div class="dropdown">
+            <a style="color: white" class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">
+
+        <span class="fa-stack fa-1x" style="display: inline-block; width: 1.5em;" >
+                      <i class="fas fa-bell" style="font-size: 20px; padding-top: -10px"></i>
+      <span class="fa fa-stack-1x">
+          <span style="font-size:85%; margin-top:-10px; margin-left: 6px;  display:block; position: relative;">
+              <i class="fas fa-circle" style="color: red"></i>
+            <span class="fa fa-stack-1x" style="padding-bottom: 2px; font-size: small">
+              4
+            </span>
+          </span>
+       </span>
+      </span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+            </div>
+          </div>
+        </li>
+        <li class="nav-item" style="padding-right: 45px;">
+          <div class="dropdown">
+            <a style="color: white; padding-top: 11px;" class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false"> Admin</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" (click)="logOut()">LogOut</a>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav" id="disableIcons">
+        <li class="nav-item"  style="padding-top: 3px; padding-right: 10px" >
+          <div class="dropdown">
+            <a style="color: white" class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true"                 aria-expanded="false"> Add</a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li class="dropdown-submenu"><a class="dropdown-item " >Assets</a>
+                <ul class="dropdown-menu ml-5">
+                  <li><a class="dropdown-item" routerLink="addasset" >Add Asset</a></li>
+                  <!--<li><a class="dropdown-item" href="#">Subsubmenu1</a></li>-->
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu"><a class="dropdown-item ">Asset Types</a>
+                <ul class="dropdown-menu ml-4">
+                  <li><a class="dropdown-item" routerLink="addassettypes" >Add Asset Types</a></li>
+                  <li><a class="dropdown-item" routerLink="viewassettypes" >View Asset Types</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu"><a class="dropdown-item ">Asset Requests</a>
+                <ul class="dropdown-menu ml-2">
+                  <li> <a class="dropdown-item" routerLink="assetrequests" >Add Asset Requests</a></li>
+                  <li> <a class="dropdown-item" routerLink="viewassetrequests" >View Asset Requests</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu "><a class="dropdown-item  ">Invoice</a>
+                <ul class="dropdown-menu ml-5">
+                  <li><a class="dropdown-item" routerLink="addinvoices" >Add Invoices</a></li>
+                  <!--<li><a class="dropdown-item" href="#">Subsubmenu2</a></li>-->
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu"><a class="dropdown-item ">Resource </a>
+                <ul class="dropdown-menu ml-5">
+                  <li><a class="dropdown-item" routerLink="addresources">Add Resource </a></li>
+                  <!--<li><a class="dropdown-item" href="#">Subsubmenu2</a></li>-->
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu"><a class="dropdown-item ">Projects</a>
+                <ul class="dropdown-menu ml-5">
+                  <li><a class="dropdown-item" routerLink="addprojects" >Add Projects</a></li>
+                  <li> <a class="dropdown-item" routerLink="viewprojects" >View Projects</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu"><a class="dropdown-item ">Purchase Orders</a>
+                <ul class="dropdown-menu">
+                  <li> <a class="dropdown-item" routerLink="addpurchaseorders" >Add Purchase Orders</a></li>
+                  <li><a class="dropdown-item" routerLink="viewpurchaseorders" >View Purchase Orders</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" style="padding-right: 10px">
+          <div class="dropdown">
+            <a style="color: white" class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">Notifications
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+            </div>
+          </div>
+        </li>
+        <li class="nav-item" style="padding-right: 45px;">
+          <div class="dropdown">
+            <a style="color: white; padding-top: 11px;" class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false"> Admin</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" (click)="logOut()">LogOut</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+

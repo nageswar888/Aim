@@ -1,0 +1,62 @@
+
+<br>
+<div *ngIf="details">
+<div class="container">
+<div class="row">
+  <div class="col-md-3"><img src="assets/Assets.jpg"></div>
+  <div class="col-md-9">
+    <div class="name">{{details.name|titlecase}}</div>
+    <div class="designation">{{details.company|titlecase}}</div>
+    <br><br>
+    <p class="designation"><b>About</b></p><hr>
+    <table>
+      <tr>
+        <td>{{'label.asset.name'|translate}}</td>
+        <td>{{details.name}}</td>
+      </tr>
+      <tr>
+        <td>{{'label.asset.serial'|translate}}</td>
+        <td>{{details.serialNumber}}</td>
+      </tr>
+      <tr>
+        <td>{{'label.asset.model'|translate}}</td>
+        <td>{{details.model}}</td>
+      </tr>
+      <tr>
+        <td>{{'label.asset.company'|translate}}</td>
+        <td>{{details.company}}</td>
+      </tr>
+      <tr>
+      <td>{{'label.asset.subscription'|translate}}</td>
+      <td>{{details.subscriptionType}}</td>
+    </tr>
+    <tr>
+      <td>{{'label.asset.warranty'|translate}}</td>
+      <td>{{details.warrantyExpireDate | date}}</td>
+    </tr>
+    <tr>
+      <td>{{'label.asset.manufacture'|translate}}</td>
+      <td>{{details.yearOfManufacture}}</td>
+    </tr>
+    <tr>
+      <td>{{'label.asset.invoiceId'|translate}}</td>
+      <td>{{details.invoiceLineItemID}}</td>
+    </tr>
+    <tr>
+      <td>{{'label.asset.description'|translate}}</td>
+      <td>{{details.description}}</td>
+    </tr>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-10 col-md-10 col-sm-10 col-lg-10 col-lx-10"></div>
+  <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 col-lx-2">
+    <button class="btn btn-info" (click)="assetAssignments()">Assignments</button>
+  </div>
+</div>
+
+</div>
+</div>
+
+

@@ -1,0 +1,116 @@
+
+<div class="row m-5">
+  <div class=" col col-lg col-sm col-xs col-lx col-md ">
+    <ng-flash-message></ng-flash-message>
+    <div class="card ">
+      <div class="card-header text-center " ><h5><b>{{'label.asset.title'|translate}}</b></h5></div>
+      <div class="card-body">
+        <div class="form-group">
+          <form [formGroup]="AddAssetsForm" (ngSubmit)="onSubmit(AddAssetsForm.value)">
+            <div class="row">
+              <label class="col-lg-2 mt-2">{{'label.asset.name'|translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="text" placeholder="{{'label.asset.name'|translate}}" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                <div *ngIf="submitted && !!f.name.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.name.errors.required">* Asset Name is required</div>
+                  <div *ngIf="!!f.name.errors.minlength">* Asset Name must be at least 3 characters</div>
+                </div>
+              </div>
+              <label class="col-lg-2 mt-2">{{'label.asset.company'|translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="text" placeholder="{{'label.asset.company'|translate}}" formControlName="company" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.company.errors }" />
+                <div *ngIf="submitted && !!f.company.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.company.errors.required">* Company is required</div>
+                  <div *ngIf="!!f.company.errors.minlength"><p>* Company must be at least 3 characters</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-lg-2 mt-2">{{'label.asset.serial'|translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="text" placeholder="{{'label.asset.serial'|translate}}" formControlName="serialNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.serialNumber.errors }" />
+                <div *ngIf="submitted && !!f.serialNumber.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.serialNumber.errors.required">* Serial Number is required</div>
+                </div>
+              </div>
+              <label class="col-lg-2 mt-2">{{'label.asset.type'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="number" placeholder="{{'label.asset.type'| translate}}" formControlName="assetType" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.assetType.errors }" />
+                <div *ngIf="submitted && !!f.assetType.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.assetType.errors.required">* Asset Type is required</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-lg-2 mt-2">{{'label.asset.model'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="text" placeholder="{{'label.asset.model'| translate}}" formControlName="model" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.model.errors }" />
+                <div *ngIf="submitted && !!f.model.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.model.errors.required">* Model is required</div>
+                </div>
+              </div>
+
+              <label  class="col-lg-2 mt-2">{{'label.asset.manufacture'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="text" placeholder="{{'label.asset.manufacture'| translate}}" formControlName="yearOfManufacture" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.yearOfManufacture.errors }" />
+                <div *ngIf="submitted && !!f.yearOfManufacture.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.yearOfManufacture.errors.required">* Year Of Manufacture is required</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-lg-2 mt-2">{{'label.asset.warranty'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="date" placeholder="{{'label.asset.warranty'| translate}}" formControlName="warrantyExpiryDate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.warrantyExpiryDate.errors }" />
+                <div *ngIf="submitted && !!f.warrantyExpiryDate.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.warrantyExpiryDate.errors.required">* Warranty Expiry Date is required</div>
+                </div>
+              </div>
+
+              <label class="col-lg-2 mt-2">{{'label.asset.description'| translate}}:</label>
+              <div class="form-group  col-lg-4">
+                <input type="text" placeholder="{{'label.asset.description'| translate}}" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                <div *ngIf="submitted && !!f.description.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.description.errors.required">* Description is required</div>
+                  <div *ngIf="!!f.description.errors.minlength"><p>* Description must be at least 3 characters</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-lg-2 mt-2">{{'label.asset.subscription'| translate}}:</label>
+              <div class="form-group  col-lg-4">
+                <input type="text" placeholder="{{'label.asset.subscription'| translate}}" formControlName="subscriptionType" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subscriptionType.errors }" />
+                <div *ngIf="submitted && !!f.subscriptionType.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.subscriptionType.errors.required">* Subscription Type is required</div>
+                </div>
+              </div>
+
+              <label class="col-lg-2 mt-2">{{'label.asset.tag'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="text" placeholder="{{'label.asset.tag'| translate}}" formControlName="tag" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.tag.errors }" />
+                <div *ngIf="submitted && !!f.tag.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.tag.errors.required">* Tag is required</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-lg-2 mt-2">{{'label.asset.invoiceId'| translate}}:</label>
+              <div class="form-group col-lg-4">
+                <input type="number" placeholder="{{'label.asset.invoiceId'| translate}}" formControlName="invoiceLineItemId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.invoiceLineItemId.errors }" />
+                <div *ngIf="submitted && !!f.invoiceLineItemId.errors" class="invalid-feedback">
+                  <div *ngIf="!!f.invoiceLineItemId.errors.required">* Invoice line item id is required</div>
+                </div>
+              </div>
+            </div>
+            <div class="row"><div class="col-lg-8"></div>
+              <div class="form-group col-lg-4">
+                <button class="btn mt-2">{{'button.asset'| translate}}</button>
+                <button class="btn mt-2 ml-3" type="reset">{{'button.reset'| translate}} </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

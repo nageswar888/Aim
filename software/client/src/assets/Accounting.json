@@ -1,0 +1,15 @@
+{"Accounting":[
+  {"id":"001", "name":"Nageswar","assigned assets":"Dell laptop" },
+  {"id":"002", "name":"Shyam","assigned assets":"Lenovo laptop" },
+  {"id":"003", "name":"John","assigned assets":"Mouse"  },
+  {"id":"004", "name":"Bob","assigned assets":"Keyboard"  },
+  {"id":"005", "name":"Ram","assigned assets":"RAM"  },
+  {"id":"006", "name":"Sai","assigned assets":"Hard disk"  },
+  {"id":"007", "name":"John", "assigned assets":"CPU" },
+  {"id":"008", "name":"Boby", "assigned assets":"Monitor" },
+  {"id":"009", "name":"Rajesh","assigned assets":"IntelliJ"  },
+  {"id":"010", "name":"Sateesh","assigned assets":"WebStorm"  },
+  {"id":"011", "name":"Johny","assigned assets":"Head Phones"  },
+  {"id":"012", "name":"Kamal","assigned assets":"Mac" }
+]}
+
